@@ -1,0 +1,208 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.aduba_000.changesfinance.IncomeStatementChanges">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1"
+        >
+
+        <TableRow>
+            <TextView
+                android:text="Income Statement Line Items"
+                android:padding="3dip"
+                android:id="@+id/incomeStatementLineItems"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Revenue Increases by"
+                android:padding="3dip"
+                android:id="@+id/revenueIncreasesByLabel"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/revenueIncreasesByValue"
+                android:layout_column="1" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Operating Expenses Increases By"
+                android:padding="3dip"
+                android:id="@+id/operatingExpensesIncreasesBy"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/operatingExpensesIncreasesByValue"
+                android:layout_column="1" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Depreciation increases by"
+                android:padding="3dip"
+                android:id="@+id/depreciationIncreasesBy"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/depreciationIncreasesByValue"
+                android:layout_column="1" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Amortization of Intangibles increases by"
+                android:padding="3dip"
+                android:id="@+id/amortizationOfIntangiblesIncreasesBy"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/amortizationOfIntangiblesIncreasesByValue"
+                android:layout_column="1" />
+
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Interest Income Increases By"
+                android:padding="3dip"
+                android:id="@+id/interestIncomeIncreasesBy"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/interestIncomeIncreasesByValue"
+                android:layout_column="1" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Interest Expense Increases By"
+                android:padding="3dip"
+                android:id="@+id/interestExpenseIncreasesBy"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/interestExpenseIncreasesByValue"
+                android:layout_column="1" />
+
+        </TableRow>
+
+
+
+        <TableRow>
+            <TextView
+                android:text="Gain/(Loss) on Sale of PPE items"
+                android:padding="3dip"
+                android:id="@+id/gainOnSaleOfPPE"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/gainOnSaleOfPPEValue"
+                android:layout_column="1" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Gain/(Loss) on Sale of ST Investments"
+                android:padding="3dip"
+                android:id="@+id/gainOnSaleOfST"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/gainOnSaleOfSTValue"
+                android:layout_column="1" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Goodwill Impairment increases by"
+                android:padding="3dip"
+                android:id="@+id/goodwillImpairment"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/goodwillImpairmentValue"
+                android:layout_column="1" />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="PPE writedown increases by"
+                android:padding="3dip"
+                android:id="@+id/ppeWritedown"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/ppeWritedownIncreasesByValue"
+                android:layout_column="1" />
+
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Deferred Income Taxes Increases By"
+                android:padding="3dip"
+                android:id="@+id/deferredIncomeTaxes"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/deferredIncomeTaxesIncreasesByValue"
+                android:layout_column="1" />
+
+        </TableRow>
+
+
+
+     </TableLayout>
+</RelativeLayout>
