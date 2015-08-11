@@ -8,6 +8,11 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.aduba_000.changesfinance.IncomeStatementChanges">
 
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <TableLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -35,7 +40,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/revenueIncreasesByValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
 
@@ -51,7 +58,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/operatingExpensesIncreasesByValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
 
@@ -68,7 +77,28 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/depreciationIncreasesByValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Stock-Based Compensation Increases By"
+                android:padding="3dip"
+                android:id="@+id/sbcIncreasesBy"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/sbcIncreasesByValue"
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
         <TableRow>
@@ -83,7 +113,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/amortizationOfIntangiblesIncreasesByValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
 
         </TableRow>
@@ -100,7 +132,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/interestIncomeIncreasesByValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
 
@@ -116,7 +150,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/interestExpenseIncreasesByValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
 
@@ -134,7 +170,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/gainOnSaleOfPPEValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
 
@@ -150,7 +188,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/gainOnSaleOfSTValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
         <TableRow>
@@ -165,7 +205,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/goodwillImpairmentValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
 
@@ -181,7 +223,9 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/ppeWritedownIncreasesByValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
 
         </TableRow>
@@ -198,11 +242,27 @@
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/deferredIncomeTaxesIncreasesByValue"
-                android:layout_column="1" />
+                android:layout_column="1"
+                android:text="0"
+                />
 
         </TableRow>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Changes"
+            android:id="@+id/submitChanges"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
 
 
      </TableLayout>
+
+    </ScrollView>
+
+
+
+
 </RelativeLayout>

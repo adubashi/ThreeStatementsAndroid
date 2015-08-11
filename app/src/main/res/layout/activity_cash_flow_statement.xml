@@ -1,0 +1,911 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.aduba_000.changesfinance.cashFlowStatementAct">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/tableLayout">
+
+            <TableRow>
+
+                <TextView
+                    android:text="Cash Flow Statement"
+                    android:padding="3dip"
+                    android:id="@+id/incomeStatementLineItems"
+                    />
+                <TextView
+                    android:text="Before"
+                    android:padding="3dip"
+                    android:id="@+id/beforeLabel"
+                    />
+
+                <TextView
+                    android:text="After"
+                    android:padding="3dip"
+                    android:id="@+id/afterLabel"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Net Income"
+                    android:padding="3dip"
+                    android:id="@+id/netIncomeLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/netIncomeBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/netIncomeAfter"
+                    android:layout_column="1" />
+
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Non-Cash Expenses"
+                    android:padding="3dip"
+                    android:id="@+id/nonCashExpensesLabel"
+                    />
+            </TableRow>
+
+
+            <TableRow>
+                <TextView
+                    android:text="Depreciation"
+                    android:padding="3dip"
+                    android:id="@+id/depreciationLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/depreciationBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/depreciationAfter"
+                    android:layout_column="1" />
+
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Stock Based Compensation"
+                    android:padding="3dip"
+                    android:id="@+id/stockBasedCompensationLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/SBCBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/SBCAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Amortization"
+                    android:padding="3dip"
+                    android:id="@+id/amortizationLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/amortizationBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/amortizationAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+
+
+            <TableRow>
+                <TextView
+                    android:text="Deferred Income Taxes"
+                    android:padding="3dip"
+                    android:id="@+id/operatingIncomeLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/deferredPortionOfIncomeTaxesBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/deferredPortionOfIncomeTaxesAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+
+
+            <TableRow>
+                <TextView
+                    android:text="Gain on sale of PPE"
+                    android:padding="3dip"
+                    android:id="@+id/gainOnSaleOfPPELabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/gainOnSaleOfPPEBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/gainOnSaleOfPPEAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Gain on sale of ST"
+                    android:padding="3dip"
+                    android:id="@+id/gainOnSaleOfSTLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/gainOnSaleOfSTBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/gainOnSaleOfSTAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Goodwill Impairment"
+                    android:padding="3dip"
+                    android:id="@+id/goodwillImpairmentLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/goodwillImpairmentBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/goodwillImpairmentAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="PPE Writedown"
+                    android:padding="3dip"
+                    android:id="@+id/ppeWritedownLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/ppeWritedownBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/ppeWritedownAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Changes Operating Assets And Liabilities"
+                    android:padding="3dip"
+                    android:id="@+id/preTaxIncomeLabel"
+                    android:textSize="12dip" />
+            </TableRow>
+
+
+            <TableRow>
+                <TextView
+                    android:text="Accounts Receivable"
+                    android:padding="3dip"
+                    android:id="@+id/accountsReceivableLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/accountsReceivableBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/accountsReceivableAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Prepaid Expenses"
+                    android:padding="3dip"
+                    android:id="@+id/currentPortionOfIncomeTaxesLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/prepaidExpensesBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/prepaidExpensesAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Inventory"
+                    android:padding="3dip"
+                    android:id="@+id/inventoryLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/inventoryBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/inventoryAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Accounts Payable"
+                    android:padding="3dip"
+                    android:id="@+id/accountsPayableLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/accountsPayableBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/accountsPayableAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Accrued Expenses"
+                    android:padding="3dip"
+                    android:id="@+id/accruedExpensesLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/accruedExpensesBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/accruedExpensesAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Deferred Revenue"
+                    android:padding="3dip"
+                    android:id="@+id/deferredRevenueLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/deferredRevenueBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/deferredRevenueAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Cash Flow from Operations"
+                    android:padding="3dip"
+                    android:id="@+id/cfOperationsLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/cfOperationsBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/cfOperationsAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Investing Activities"
+                    android:padding="3dip"
+                    android:id="@+id/investingActivitiesLabel"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Purchase Short Term Investments"
+                    android:padding="3dip"
+                    android:id="@+id/purchaseShortTermInvestments"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/purchaseShortTermInvestmentsBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/purchaseShortTermInvestmentsAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Sell Short Term Investments"
+                    android:padding="3dip"
+                    android:id="@+id/sellShortTermInvestments"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/sellShortTermInvestmentsBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/sellShortTermInvestmentsAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Purchase Long Term Investments"
+                    android:padding="3dip"
+                    android:id="@+id/purchaseLongTermInvestments"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/purchaseLongTermInvestmentsBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/purchaseLongTermInvestmentsAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Sell Long Term Investments"
+                    android:padding="3dip"
+                    android:id="@+id/sellLongTermInvestments"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/sellLongTermInvestmentsBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/sellLongTermInvestmentsAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Capital Expenditures"
+                    android:padding="3dip"
+                    android:id="@+id/capitalExpendituresLabel"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/capitalExpendituresBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/capitalExpendituresAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="PPE sale proceeds"
+                    android:padding="3dip"
+                    android:id="@+id/ppeSaleProceeds"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/ppeSaleProceedsBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/ppeSaleProceedsAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Cash Flow from Investing"
+                    android:padding="3dip"
+                    android:id="@+id/cashFlowfromInvesting"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/cashFlowfromInvestingBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/cashFlowfromInvestingAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Financing Activities"
+                    android:padding="3dip"
+                    android:id="@+id/financingActivitiesLabel"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Dividends Issued"
+                    android:padding="3dip"
+                    android:id="@+id/dividendsIssued"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/dividendsIssuedBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/dividendsIssuedAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Issue Long-Term Debt"
+                    android:padding="3dip"
+                    android:id="@+id/issueLongTermDebt"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/issueLongTermDebtBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/issueLongTermDebtAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Repay Long-Term Debt"
+                    android:padding="3dip"
+                    android:id="@+id/repayLongTermDebt"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/repayLongTermDebtBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/repayLongTermDebtAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Issue Short-Term Debt"
+                    android:padding="3dip"
+                    android:id="@+id/issueShortTermDebt"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/issueShortTermDebtBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/issueShortTermDebtAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Repay Short-Term Debt"
+                    android:padding="3dip"
+                    android:id="@+id/repayShortTermDebt"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/repayShortTermDebtBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/repayShortTermDebtAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Repurchase Shares"
+                    android:padding="3dip"
+                    android:id="@+id/repurchaseShares"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/repurchaseSharesBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/repurchaseSharesAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Issue New Shares"
+                    android:padding="3dip"
+                    android:id="@+id/issueNewShares"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/issueNewSharesBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/issueNewSharesAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Cash Flow From Financing"
+                    android:padding="3dip"
+                    android:id="@+id/cashFlowFromFinancing"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/cashFlowFromFinancingBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/cashFlowFromFinancingAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Beginning Cash"
+                    android:padding="3dip"
+                    android:id="@+id/beginningCash"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/beginningCashBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/beginningCashAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Increase/Decrease in Cash"
+                    android:padding="3dip"
+                    android:id="@+id/increaseInCash"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/increaseInCashBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/increaseInCashAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Cash and Cash Equivalents"
+                    android:padding="3dip"
+                    android:id="@+id/endCash"
+                    />
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/endCashBefore"
+                    android:layout_column="1" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/endCashAfter"
+                    android:layout_column="1" />
+
+            </TableRow>
+
+
+
+
+
+
+
+
+
+
+
+        </TableLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.aduba_000.changesfinance.BalanceStatementChanges">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1"
+        >
+
+        <TableRow>
+            <TextView
+                android:text="Balance Sheet Line Items"
+                android:padding="3dip"
+                android:id="@+id/balanceSheetLineItems"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Accounts Receivable Increases By"
+                android:padding="3dip"
+                android:id="@+id/accountsReceivableIncreasesByLabel"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/accountsReceivableIncreasesByValue"
+                android:layout_column="1"
+                android:text="0"
+                />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Prepaid Expenses Increases By"
+                android:padding="3dip"
+                android:id="@+id/prepaidExpensesIncreasesByLabel"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/prepaidExpensesIncreasesByValue"
+                android:layout_column="1"
+                android:text="0"
+                />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Inventory Increases By"
+                android:padding="3dip"
+                android:id="@+id/inventoryIncreasesByLabel"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/inventoryIncreasesByValue"
+                android:layout_column="1"
+                android:text="0"
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Accrued Expenses Increases By"
+                android:padding="3dip"
+                android:id="@+id/accruedExpensesIncreasesByLabel"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/accruedExpensesIncreasesByValue"
+                android:layout_column="1"
+                android:text="0"
+                />
+
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Accounts Payable Increases By"
+                android:padding="3dip"
+                android:id="@+id/accountsPayableIncreasesByLabel"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/accountsPayableIncreasesByValue"
+                android:layout_column="1"
+                android:text="0"
+                />
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Deferred Revenue Increases By"
+                android:padding="3dip"
+                android:id="@+id/deferredRevenueIncreasesByLabel"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/deferredRevenueIncreasesByValue"
+                android:layout_column="1"
+                android:text="0"
+                />
+
+        </TableRow>
+
+
+
+
+
+
+
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Changes"
+            android:id="@+id/submitChanges"
+            android:layout_centerHorizontal="true" />
+
+
+
+
+
+
+    </TableLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

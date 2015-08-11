@@ -1,7 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.aduba_000.changesfinance.IncomeStatementChanges" >
-
+    tools:context="com.example.aduba_000.changesfinance.CashFlowStatementA" >
     <item android:id="@+id/introduction"
         android:title="Introduction"
         android:orderInCategory="100"

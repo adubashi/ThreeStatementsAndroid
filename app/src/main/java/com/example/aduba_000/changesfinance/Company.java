@@ -1,4 +1,4 @@
-
+package com.example.aduba_000.changesfinance;
 public class Company {
 	
 	
@@ -8,7 +8,7 @@ public class Company {
 
 	
 	public Company(int cash, double taxRate){
-		currentCompanyIS = new IncomeStatement(0,0,0);
+		currentCompanyIS = new IncomeStatement(taxRate,0,0,0);
 		currentCompanyBS = new BalanceSheet(cash,0,0);
 		currentCompanyCF = new CashFlowStatement(cash,0);
 		currentCompanyIS.setTaxRate(taxRate);
@@ -20,7 +20,7 @@ public class Company {
 
 	
 	public void printTable(){
-		update();
+		//update();
 		//System.out.println(currentCompanyCF.getPPEsaleProceeds());
 		currentCompanyIS.printTable();
 		currentCompanyBS.printTable();
@@ -28,20 +28,12 @@ public class Company {
 	}
 	
 	public void update(){
-			
-		
 		 //Update Cash Flow operations
 		 updateCashFlowOperations();
 		 //UpdateCashFlowOperations
 		 updateNetIncome();
 		 //Update Balance Sheet
 		 updateBalanceSheet();
-		 
-		 recalculate();
-	
-		
-		
-		
 	}
 	
 	
@@ -60,11 +52,12 @@ public class Company {
 	//Set all the cash flow statement variables, then move on to the balance sheet 
 	public void updateNetIncome(){
 		currentCompanyCF.setNetIncome(currentCompanyIS.getNetIncome());
-		recalculate();		
-		currentCompanyBS.setCash(currentCompanyBS.getCash() + currentCompanyCF.getIncreaseInCash());
 		recalculate();
-		
+		currentCompanyBS.setCash(currentCompanyCF.getEndCash());
+		recalculate();
 	}
+
+
 	
 	public void updateCashFlowOperations(){
 		/*
@@ -130,10 +123,23 @@ public class Company {
 		//Shareholders Equity
 		currentCompanyBS.setCommonStock(currentCompanyBS.getCommonStock() + currentCompanyCF.getIssueNewShares() + currentCompanyCF.getStockBasedCompensation() );
 		currentCompanyBS.setTreasuryStock(currentCompanyBS.getTreasuryStock() + currentCompanyCF.getRepurchaseShares());
-		currentCompanyBS.setRetainedEarnings(currentCompanyBS.getRetainedEarnings() + currentCompanyCF.getNetIncome() - currentCompanyCF.getDividendsIssued() );
-		currentCompanyBS.setOtherIncome(currentCompanyBS.getOtherIncome());
-		
+        currentCompanyBS.setOtherIncome(currentCompanyBS.getOtherIncome());
+
+
+
+		currentCompanyBS.setRetainedEarnings(0);
+        balance();
+        recalculate();
+
 	}
+
+    public void balance(){
+        int j = currentCompanyBS.getTotalAssets();
+        int k = currentCompanyBS.getTotalLiabilities();
+        int l = j - k;
+        recalculate();
+        currentCompanyBS.setRetainedEarnings(l - currentCompanyBS.getCommonStock() - currentCompanyBS.getTreasuryStock() - currentCompanyBS.getOtherIncome());
+    }
 	
 	
 	

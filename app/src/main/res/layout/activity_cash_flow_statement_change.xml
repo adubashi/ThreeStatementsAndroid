@@ -1,0 +1,293 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.aduba_000.changesfinance.CashFlowStatementChange">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="1"
+            >
+
+            <TableRow>
+                <TextView
+                    android:text="Cash Flow Statement Line Items"
+                    android:padding="3dip"
+                    android:id="@+id/cashFlowStatementLineItemsLineItems"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Purchase Short-Term Investments"
+                    android:padding="3dip"
+                    android:id="@+id/purchaseShortTermInvestmentsLabel"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/purchaseShortTermInvestmentsIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Sell Short-Term Investments"
+                    android:padding="3dip"
+                    android:id="@+id/sellShortTermInvestmentsLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/sellShortTermInvestmentsIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Purchase Long Term Investments"
+                    android:padding="3dip"
+                    android:id="@+id/purchaseLongTermInvestmentsLabel"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/purchaseLongTermInvestmentsIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Sell Long-Term Investments"
+                    android:padding="3dip"
+                    android:id="@+id/sellLongTermInvestmentsLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/sellLongTermInvestmentsIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Capital Expenditures"
+                    android:padding="3dip"
+                    android:id="@+id/capitalExpendituresIncreasesBy"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/capitalExpendituresIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="PPE sales proceeds increases by"
+                    android:padding="3dip"
+                    android:id="@+id/ppeSaleProceeds"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/ppeSaleProceedsIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+
+
+
+            <TableRow>
+                <TextView
+                    android:text="Dividends Issued "
+                    android:padding="3dip"
+                    android:id="@+id/dividendsIssuedLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/dividendsIssuedIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Issued Long-Term Debt"
+                    android:padding="3dip"
+                    android:id="@+id/issuedLongTermDebtLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/issuedLongTermIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Repay Long Term Debt"
+                    android:padding="3dip"
+                    android:id="@+id/repayLongTermDebtLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/repayLongTermDebtIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Issued Short Term Debt"
+                    android:padding="3dip"
+                    android:id="@+id/issuedShortTermDebtLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/issuedShortTermDebtIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Repay Short Term Debt"
+                    android:padding="3dip"
+                    android:id="@+id/repayShortTermDebtLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/repayShortTermDebtIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Repurchase Shares"
+                    android:padding="3dip"
+                    android:id="@+id/repurchaseSharesLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/repurchaseSharesIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="Issue New Shares"
+                    android:padding="3dip"
+                    android:id="@+id/issueNewSharesLabel"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/issueNewSharesIncreasesByValue"
+                    android:layout_column="1"
+                    android:text="0"
+                    />
+
+            </TableRow>
+
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Changes"
+                    android:id="@+id/submitChanges"
+                    android:layout_centerHorizontal="true" />
+
+
+
+
+
+
+        </TableLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

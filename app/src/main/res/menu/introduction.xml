@@ -1,8 +1,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Introduction" >
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    <item android:id="@+id/introduction"
+        android:title="Introduction"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/activity_income_statement"
+        android:title="Income Statement"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/activity_income_statement_changes"
+        android:title="Income Statement Changes"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/activity_cash_flow_statement"
+        android:title="Cash Flow Statement"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/activity_cash_flow_statement_change"
+        android:title="Cash Flow Statement Changes"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/activity_balance_sheet_statement"
+        android:title="Balance Sheet"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/activity_balance_sheet_change"
+        android:title="Balance Sheet Changes"
         android:orderInCategory="100"
         android:showAsAction="never" />
 </menu>

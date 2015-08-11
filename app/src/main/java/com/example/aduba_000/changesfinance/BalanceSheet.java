@@ -1,3 +1,4 @@
+package com.example.aduba_000.changesfinance;
 
 public class BalanceSheet {
 	private int cash;
@@ -115,7 +116,7 @@ public class BalanceSheet {
 		calculateTotalLiabilities();
 		calculateShareholdersEquity();
 		calculateTotalLiabilitiesAndEquity();
-		balanced();
+		//balanced();
 		
 	}
 	
@@ -188,7 +189,9 @@ public class BalanceSheet {
 
 
 	public void setPPE(int pPE) {
-		PPE = pPE;
+		System.out.println("Setting PPE: ");
+        System.out.println(pPE);
+        PPE = pPE;
 	}
 
 
@@ -409,7 +412,7 @@ public class BalanceSheet {
 	}
 	
 	public void printTable(){
-		update();
+		//update();
 		System.out.println("----------------------------------------------------");
 		System.out.format("%32s", "BALANCE SHEET");
 		System.out.println();

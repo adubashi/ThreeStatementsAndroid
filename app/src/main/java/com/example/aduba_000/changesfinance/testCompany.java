@@ -1,3 +1,6 @@
+package com.example.aduba_000.changesfinance;
+
+import com.example.aduba_000.changesfinance.Company;
 
 public class testCompany {
 	

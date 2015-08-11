@@ -1,11 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.aduba_000.changesfinance.IncomeStatementChanges" >
-
+    tools:context="com.example.aduba_000.changesfinance.BalanceSheetStatement" >
     <item android:id="@+id/introduction"
         android:title="Introduction"
         android:orderInCategory="100"
         android:showAsAction="never" />
+
+    
     <item android:id="@+id/activity_income_statement"
         android:title="Income Statement"
         android:orderInCategory="100"

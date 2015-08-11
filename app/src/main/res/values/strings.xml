@@ -5,5 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_income_statement_changes">IncomeStatementChanges</string>
+    <string name="title_activity_income_statement">incomeStatementAct</string>
+    <string name="title_activity_cash_flow_statement">cashFlowStatementAct</string>
+    <string name="title_activity_cash_flow_statement_change">CashFlowStatementChange</string>
+    <string name="title_activity_changes_balance_sheet">changesBalanceSheet</string>
+    <string name="title_activity_balance_sheet_statement">BalanceSheetStatement</string>
+    <string name="title_activity_balance_statement_changes">BalanceStatementChanges</string>
 
 </resources>

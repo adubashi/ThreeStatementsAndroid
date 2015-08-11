@@ -7,7 +7,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".Introduction"
-    android:id="@+id/">
+    android:id="@+id/introductionActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,6 +53,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
+        android:text="0"
         android:id="@+id/cashBalance"
         android:layout_toEndOf="@+id/cashBalanceLabel"
         android:layout_above="@+id/taxRateLabel"
@@ -61,10 +62,18 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="numberDecimal|numberSigned"
+        android:text="0"
         android:ems="10"
         android:id="@+id/taxRate"
         android:layout_alignBottom="@+id/taxRateLabel"
         android:layout_alignEnd="@+id/cashBalance" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Changes"
+        android:id="@+id/submitChanges"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

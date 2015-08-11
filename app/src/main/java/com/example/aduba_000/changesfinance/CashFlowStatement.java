@@ -1,3 +1,5 @@
+package com.example.aduba_000.changesfinance;
+
 
 public class CashFlowStatement {
 	private int netIncome;
@@ -68,8 +70,8 @@ public class CashFlowStatement {
 	}
 	
 	public void calculateCFfromFinancing(){
-		this.CFfromFinancing = -this.dividendsIssued + this.issueLongTermDebt - this.repayLongTermDebt
-				+ this.issueShortTermDebt - this.repayShortTermDebt - this.repurchaseShares + this.issueNewShares;	
+		this.CFfromFinancing = this.dividendsIssued + this.issueLongTermDebt + this.repayLongTermDebt
+				+ this.issueShortTermDebt + this.repayShortTermDebt + this.repurchaseShares + this.issueNewShares;	
 	}
 	
 	public void calculateIncreaseInCash(){
@@ -89,7 +91,6 @@ public class CashFlowStatement {
 	}
 	
 	public void printTable(){
-		update();
 		System.out.println("----------------------------------------------------");
 		System.out.format("%32s", "CASH FLOW STATEMENT");
 		System.out.println();

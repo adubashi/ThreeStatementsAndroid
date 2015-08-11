@@ -20,6 +20,34 @@
             android:name=".IncomeStatementChanges"
             android:label="@string/title_activity_income_statement_changes" >
         </activity>
+        <activity
+            android:name=".incomeStatementAct"
+            android:label="@string/title_activity_income_statement" >
+        </activity>
+        <activity
+            android:name=".cashFlowStatementAct"
+            android:label="@string/title_activity_cash_flow_statement" >
+        </activity>
+        <activity
+            android:name=".CashFlowStatementA"
+            android:label="@string/title_activity_cash_flow_statement" >
+        </activity>
+        <activity
+            android:name=".CashFlowStatementChange"
+            android:label="@string/title_activity_cash_flow_statement_change" >
+        </activity>
+        <activity
+            android:name=".changesBalanceSheet"
+            android:label="@string/title_activity_changes_balance_sheet" >
+        </activity>
+        <activity
+            android:name=".BalanceSheetStatement"
+            android:label="@string/title_activity_balance_sheet_statement" >
+        </activity>
+        <activity
+            android:name=".BalanceStatementChanges"
+            android:label="@string/title_activity_balance_statement_changes" >
+        </activity>
     </application>
 
 </manifest>

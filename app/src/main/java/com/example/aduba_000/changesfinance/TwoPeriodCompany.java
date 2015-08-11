@@ -1,4 +1,4 @@
-
+package com.example.aduba_000.changesfinance;
 public class TwoPeriodCompany {
 	
 	public Company currentCompany;
@@ -83,12 +83,14 @@ public class TwoPeriodCompany {
 	}
 	
 	public void printTable(){
+        /*
 		System.out.println("CURRENT COMPANY");
 		currentCompany.printTable();
 		System.out.println("END COMPANY");
 		endCompany.printTable();
 		calculateChanges();
 		printChanges();
+		*/
 		
 	}
 	
@@ -119,13 +121,15 @@ public class TwoPeriodCompany {
 		System.out.println();
 		System.out.format("%32s%10d", "Change In Assets", this.changeInAssets);
 		System.out.println();
-		System.out.format("%32s%10d", "Change In Liabilties", this.changeInLiabilitiesSide);
+		System.out.format("%32s%10d", "Change In Liabilities", this.changeInLiabilitiesSide);
 		
 	}
-	
+
 	//////////////////Changes in Income Statement/////////////////////////
+
+    ///Changes in Income statement working on////////////////////
 	public void changeRevenue(int increment){
-		endCompany.currentCompanyIS.setRevenue(endCompany.currentCompanyIS.getRevenue() + increment);
+		endCompany.currentCompanyIS.setRevenue(currentCompany.currentCompanyIS.getRevenue() + increment);
 	}
 	
 	public void changeOperatingExpenses(int increment){
@@ -168,41 +172,79 @@ public class TwoPeriodCompany {
 	public void changeDeferredIncomeTaxes(int increment){
 		endCompany.currentCompanyIS.setDeferredPortionOfIncomeTaxes(endCompany.currentCompanyIS.getDeferredPortionOfIncomeTaxes() + increment);
 	}
-	
+
 	//Balance Sheet Items
 	public void changeAccountsReceivable(int increment){
-		endCompany.currentCompanyIS.setRevenue(endCompany.currentCompanyIS.getRevenue() + increment);
-		endCompany.currentCompanyCF.setChangesInaccountsReceivable(-1 * increment);
-		endCompany.currentCompanyBS.setAccountsReceivable(endCompany.currentCompanyBS.getAccountsReceivable() + 2*increment);
+		endCompany.currentCompanyBS.setAccountsReceivable(endCompany.currentCompanyBS.getAccountsReceivable() + increment);
+        endCompany.currentCompanyBS.update();
+
+
+        endCompany.currentCompanyIS.setRevenue(endCompany.currentCompanyIS.getRevenue() + increment);
+        endCompany.currentCompanyIS.update();
+
+
+        endCompany.currentCompanyCF.setNetIncome(endCompany.currentCompanyIS.getNetIncome());
+        endCompany.currentCompanyCF.setChangesInaccountsReceivable(-increment);
+
+        endCompany.currentCompanyCF.update();
+        endCompany.currentCompanyBS.setCash(endCompany.currentCompanyCF.getEndCash());
+
+
 	}
-	
+
+
 	public void changeAccountsPayable(int increment){
-		endCompany.currentCompanyIS.setOperatingExpenses(endCompany.currentCompanyIS.getOperatingExpenses() + increment);
-		endCompany.currentCompanyCF.setChangesInaccountsPayable(increment);
-		endCompany.currentCompanyBS.setAccountsPayable(endCompany.currentCompanyBS.getAccountsPayable());
+        endCompany.currentCompanyBS.setAccountsPayable(endCompany.currentCompanyBS.getAccruedExpenses() + increment);
+        endCompany.currentCompanyBS.update();
+
+
+        endCompany.currentCompanyIS.setOperatingExpenses(endCompany.currentCompanyIS.getOperatingExpenses() + increment);
+        endCompany.currentCompanyIS.update();
+
+
+        endCompany.currentCompanyCF.setNetIncome(endCompany.currentCompanyIS.getNetIncome());
+        endCompany.currentCompanyCF.setChangesInaccruedExpenses(increment);
+
+        endCompany.currentCompanyCF.update();
+        endCompany.currentCompanyBS.setCash(endCompany.currentCompanyCF.getEndCash());
 	}
 	
 	
 	public void changePrepaidExpenses(int increment){
 		endCompany.currentCompanyCF.setChangesInprepaidExpenses(-increment);
+        endCompany.currentCompanyCF.update();
+        endCompany.currentCompanyBS.setPrepaidExpenses(endCompany.currentCompanyBS.getPrepaidExpenses() + increment);
+        endCompany.currentCompanyBS.setCash(endCompany.currentCompanyCF.getEndCash());
 	}
 	
 	public void changeInventory(int increment){
-		endCompany.currentCompanyCF.setChangesIninventory(-increment);
-		endCompany.currentCompanyBS.setInventory(endCompany.currentCompanyBS.getInventory() + increment);
+        endCompany.currentCompanyCF.setChangesIninventory(-increment);
+        endCompany.currentCompanyCF.update();
+        endCompany.currentCompanyBS.setInventory(endCompany.currentCompanyBS.getInventory() + increment);
+        endCompany.currentCompanyBS.setCash(endCompany.currentCompanyCF.getEndCash());
 	}
 	
 	public void changeAccruedExpenses(int increment){
-		endCompany.currentCompanyIS.setOperatingExpenses(endCompany.currentCompanyIS.getOperatingExpenses() + increment);
-		endCompany.currentCompanyCF.setChangesInaccruedExpenses(increment);
+        endCompany.currentCompanyBS.setAccruedExpenses(endCompany.currentCompanyBS.getAccruedExpenses() + increment);
+        endCompany.currentCompanyBS.update();
+
+
+        endCompany.currentCompanyIS.setOperatingExpenses(endCompany.currentCompanyIS.getOperatingExpenses() + increment);
+        endCompany.currentCompanyIS.update();
+
+
+        endCompany.currentCompanyCF.setNetIncome(endCompany.currentCompanyIS.getNetIncome());
+        endCompany.currentCompanyCF.setChangesInaccruedExpenses(increment);
+
+        endCompany.currentCompanyCF.update();
+        endCompany.currentCompanyBS.setCash(endCompany.currentCompanyCF.getEndCash());
 	}
 	
 	public void changeDeferredRevenue(int increment){
-		//endCompany.currentCompanyIS.setOperatingExpenses(endCompany.currentCompanyIS.getOperatingExpenses() + increment);
 		endCompany.currentCompanyCF.setChangesIndeferredRevenue(increment);
 	}
-	
-	
+
+
 	///Cash flow statement items
 	
 	public void changePurchaseShortTermInvestments(int increment){
@@ -232,7 +274,7 @@ public class TwoPeriodCompany {
 	}
 	
 	public void changeIncreaseDividendsIssued(int increment){
-		endCompany.currentCompanyCF.setDividendsIssued(increment);
+		endCompany.currentCompanyCF.setDividendsIssued(-1 * increment);
 	}
 	
 	public void changeIssueLongTermDebt(int increment){
@@ -240,28 +282,47 @@ public class TwoPeriodCompany {
 	}
 	
 	public void changeRepayLongTermDebt(int increment){
-		endCompany.currentCompanyCF.setRepayLongTermDebt(increment);
-		endCompany.currentCompanyBS.setLongTermDebt(endCompany.currentCompanyBS.getLongTermDebt() - 2 * increment);
+		endCompany.currentCompanyCF.setRepayLongTermDebt(-1 * increment);
+		endCompany.currentCompanyBS.setLongTermDebt(endCompany.currentCompanyBS.getLongTermDebt());
 	}
 	
 	public void changeIssueShortTermDebt(int increment){
 		endCompany.currentCompanyCF.setIssueShortTermDebt(increment);
 	}
 	public void changeRepayShortTermDebt(int increment){
-		endCompany.currentCompanyCF.setRepayShortTermDebt(increment);
-		endCompany.currentCompanyBS.setRevolver(endCompany.currentCompanyBS.getRevolver() - 2 * increment);
+		endCompany.currentCompanyCF.setRepayShortTermDebt(-1 * increment);
+
 	}
 	
 	public void changeRepurchaseShares(int increment){
-		endCompany.currentCompanyCF.setRepurchaseShares(increment);
-		endCompany.currentCompanyBS.setTreasuryStock(endCompany.currentCompanyBS.getTreasuryStock() - 2 * increment);
+		endCompany.currentCompanyCF.setRepurchaseShares(-1 * increment);
+
 	}
 	
 	public void changeIssueNewShares(int increment){
 		endCompany.currentCompanyCF.setIssueNewShares(increment);
 	}
 	////End of changes
-	
+
+    public void update(){
+        currentCompany.update();
+        endCompany.update();
+    }
+
+    public void updateNetIncome(){
+        currentCompany.updateNetIncome();
+        endCompany.updateNetIncome();
+    }
+
+    //Special Net Income Change
+    public void updateNetIncome2(){
+        currentCompany.currentCompanyCF.setNetIncome(currentCompany.currentCompanyIS.getNetIncome());
+        currentCompany.recalculate();
+        endCompany.recalculate();
+        endCompany.currentCompanyBS.setCash( endCompany.currentCompanyCF.getEndCash());
+        currentCompany.recalculate();
+        endCompany.recalculate();
+    }
 
 
 }
